@@ -16,11 +16,13 @@ public class Main {
 
             if (choice == 1) {
                 runShoppingProgram();
+                } else if (choice == 3) {
+                    sumTwoNumbers();
             } else if (choice == 2) {
                 System.out.println("Exit program.");
                 break;
             } else {
-                System.out.println("Please choose 1 or 2.");
+                    System.out.println("Please choose 1, 2 or 3.");
             }
         }
     }
@@ -29,6 +31,7 @@ public class Main {
         System.out.println("\n======= MENU =======");
         System.out.println("1. Run program");
         System.out.println("2. Exit program");
+            System.out.println("3. Sum two numbers");
         System.out.print("Please choose: ");
     }
 
@@ -38,4 +41,14 @@ public class Main {
         billModel.inputWallet();
         billModel.printTotalAndResult();
     }
+
+        private static void sumTwoNumbers() {
+            System.out.print("Input the first number: ");
+            int firstNumber = InputValidationModel.checkInputInt();
+
+            System.out.print("Input the second number: ");
+            int secondNumber = InputValidationModel.checkInputInt();
+
+            System.out.println("Sum: " + (firstNumber + secondNumber));
+        }
 }
